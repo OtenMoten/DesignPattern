@@ -1,6 +1,6 @@
 // Has a "Has a" relationship with Pizza, this is an "Aggregation Relationship".
 
-package Decorator;
+package Decorator_Pizza;
 
 abstract class ToppingDecorator implements Pizza {
 

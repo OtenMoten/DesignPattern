@@ -1,6 +1,6 @@
 // Blueprint for classes that will have decorators
 
-package Decorator;
+package Decorator_Pizza;
 
 public interface Pizza {
 	

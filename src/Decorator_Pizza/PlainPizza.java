@@ -3,7 +3,7 @@
 
 // Every Pizza made will start as a PlainPizza
 
-package Decorator;
+package Decorator_Pizza;
 
 public class PlainPizza implements Pizza {
  

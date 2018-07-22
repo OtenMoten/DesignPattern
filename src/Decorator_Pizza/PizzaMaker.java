@@ -1,4 +1,4 @@
-package Decorator;
+package Decorator_Pizza;
 
 public class PizzaMaker {
 	

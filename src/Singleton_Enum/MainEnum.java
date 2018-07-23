@@ -5,13 +5,13 @@ public class MainEnum {
     public static void main(String[] args) {
 
         SingletonEnum objNicolaus = SingletonEnum.INSTANCE;
-	objNicolaus.verteileGaben();
+	objNicolaus.giveGods();
         
 	SingletonEnum objSanta = SingletonEnum.INSTANCE;
-	objSanta.verteileGaben();
+	objSanta.giveGods();
         
-	System.out.println(objNicolaus.hashCode());
-	System.out.println(objSanta.hashCode());
+	System.out.println("Hi, I'm Nicolaus. My hashcode is: " + objNicolaus.hashCode());
+	System.out.println("Hi, I'm Santa. My hashcode is: " + objSanta.hashCode());
         
     }
 

@@ -3,9 +3,9 @@ package Singleton_Enum;
 public enum SingletonEnum {
 
     INSTANCE;
-	
-    public void verteileGaben(){
-	System.out.println("an viele Kinder");	
+
+    public void giveGods(){
+	System.out.println(INSTANCE.hashCode() + " is giving Gods to kids.");	
     }
     
 }

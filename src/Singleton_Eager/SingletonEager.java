@@ -7,7 +7,7 @@ public class SingletonEager {
     private static SingletonEager objSingletonEager = new SingletonEager(1);
 
     // Constructor is private.
-    // This is one of the keypoints in the Singleton design pattern.
+    // This is one of the keypoints in the Singleton_Eager design pattern.
     private SingletonEager(int newInt) {
     	iSaveInt = newInt;
     }

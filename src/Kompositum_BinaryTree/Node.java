@@ -72,6 +72,8 @@ public class Node implements BinSearchTree {
 
         // Wurzelknoten
         // linker Teilbaum - rechter Teilbaum
+        
+        // Print the 'nodeID' before the ordering
         System.out.print(nodeID + " ");
 
         if (objRightBinarySearchTree != null) {
@@ -89,6 +91,7 @@ public class Node implements BinSearchTree {
 
         // linker Teilbaum - rechter Teilbaum
         // Wurzelknoten
+        
         if (objRightBinarySearchTree != null) {
             ((BinSearchTree) objRightBinarySearchTree).postOrder();
         }
@@ -97,6 +100,7 @@ public class Node implements BinSearchTree {
             ((BinSearchTree) objLeftBinarySearchTree).postOrder();
         }
 
+        // Print the 'nodeID' after the ordering
         System.out.print(nodeID + " ");
 
     }

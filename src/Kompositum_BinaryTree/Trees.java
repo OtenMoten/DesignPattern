@@ -26,14 +26,17 @@ class EmptyTree implements BinSearchTree {
         return objEmptyTree;
     }
 
+    @Override
     public boolean isEmpty() {
         return true;
     }
 
+    @Override
     public boolean isIn(Integer inputInteger) {
         return false;
     }
 
+    @Override
     public BinSearchTree insert(Integer objNewBinarySearchTree) {
         return new Node(objNewBinarySearchTree);
     }

@@ -10,8 +10,8 @@ public class Node implements BinSearchTree {
     public Node(Integer newNodeID) {
 
         this.nodeID = newNodeID;
-        objLeftBinarySearchTree = EmptyTree.Instance();
-        objRightBinarySearchTree = EmptyTree.Instance();
+        this.objLeftBinarySearchTree = EmptyTree.Instance();
+        this.objRightBinarySearchTree = EmptyTree.Instance();
 
     }
 
@@ -23,14 +23,14 @@ public class Node implements BinSearchTree {
     @Override
     public BinSearchTree insert(Integer objNewInteger) {
 
-        switch (nodeID.compareTo(objNewInteger)) {
-            case -1:
-                objLeftBinarySearchTree = objLeftBinarySearchTree.insert(objNewInteger);
+        switch (this.nodeID.compareTo(objNewInteger)) {
+            case -1: // 'this.nodeID' is lower >> Put higher 'objNewInteger' in the left root
+                this.objLeftBinarySearchTree = this.objLeftBinarySearchTree.insert(objNewInteger);
                 break;
             case 0:
                 break;
-            case +1:
-                objRightBinarySearchTree = objRightBinarySearchTree.insert(objNewInteger);
+            case +1: // 'this.nodeID' is higher >> Put lower 'objNewInteger' in the right root
+                this.objRightBinarySearchTree = this.objRightBinarySearchTree.insert(objNewInteger);
                 break;
         }
         return this;
@@ -40,33 +40,36 @@ public class Node implements BinSearchTree {
     @Override
     public boolean isIn(Integer newNodeID) {
 
-        switch (nodeID.compareTo(newNodeID)) {
+        switch (this.nodeID.compareTo(newNodeID)) {
             case -1:
-                return objLeftBinarySearchTree.isIn(newNodeID);
+                return this.objLeftBinarySearchTree.isIn(newNodeID);
             case 0:
                 return true;
             case +1:
-                return objRightBinarySearchTree.isIn(newNodeID);
+                return this.objRightBinarySearchTree.isIn(newNodeID);
         }
         return false;
     }
 
     @Override
     public void inOrder() {
-
-        // sortiert
-        if (objRightBinarySearchTree != null) {
-            ((BinSearchTree) objRightBinarySearchTree).inOrder();
+        
+        // sorted
+        if (this.objRightBinarySearchTree != null) {
+            ((BinSearchTree) this.objRightBinarySearchTree).inOrder();
         }
-
+        
         System.out.print(nodeID + " ");
-
-        if (objLeftBinarySearchTree != null) {
-            ((BinSearchTree) objLeftBinarySearchTree).inOrder();
+        
+        //'if' matches everytime
+        if (this.objLeftBinarySearchTree != null) {
+            //if it's a Node '.inOrder()' will recursive executed
+            //if it's a Empty-Tree '.inOrder()' will do nothing
+            ((BinSearchTree) this.objLeftBinarySearchTree).inOrder();
         }
-
+        
     }
-
+    
     @Override
     public void preOrder() {
 
@@ -76,12 +79,12 @@ public class Node implements BinSearchTree {
         // Print the 'nodeID' before the ordering
         System.out.print(nodeID + " ");
 
-        if (objRightBinarySearchTree != null) {
-            ((BinSearchTree) objRightBinarySearchTree).preOrder();
+        if (this.objRightBinarySearchTree != null) {
+            ((BinSearchTree) this.objRightBinarySearchTree).preOrder();
         }
 
-        if (objLeftBinarySearchTree != null) {
-            ((BinSearchTree) objLeftBinarySearchTree).preOrder();
+        if (this.objLeftBinarySearchTree != null) {
+            ((BinSearchTree) this.objLeftBinarySearchTree).preOrder();
         }
 
     }
@@ -92,12 +95,12 @@ public class Node implements BinSearchTree {
         // linker Teilbaum - rechter Teilbaum
         // Wurzelknoten
         
-        if (objRightBinarySearchTree != null) {
-            ((BinSearchTree) objRightBinarySearchTree).postOrder();
+        if (this.objRightBinarySearchTree != null) {
+            ((BinSearchTree) this.objRightBinarySearchTree).postOrder();
         }
 
-        if (objLeftBinarySearchTree != null) {
-            ((BinSearchTree) objLeftBinarySearchTree).postOrder();
+        if (this.objLeftBinarySearchTree != null) {
+            ((BinSearchTree) this.objLeftBinarySearchTree).postOrder();
         }
 
         // Print the 'nodeID' after the ordering

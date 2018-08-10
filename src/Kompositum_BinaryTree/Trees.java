@@ -28,11 +28,20 @@ class EmptyTree implements BinSearchTree {
     // are created with the function '.insert(Integer objNewBinarySearchTree)'.
     private static EmptyTree objEmptyTree = new EmptyTree();
     private EmptyTree() {}
+    
+    // Just a variable
+    static int counter = 0;
 
     public static EmptyTree createInstance() {
+        counter++; // Count +1 every time a instance was created.
         return objEmptyTree;
     }
 
+    // Function must also be static to access the static variable 'counter'.
+    public static int getCountOfInstances() {
+        return counter;
+    }
+    
     @Override
     public boolean isEmpty() {
         return true;

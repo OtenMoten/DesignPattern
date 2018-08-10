@@ -18,6 +18,10 @@ public class Main {
 	objBinarySearchTree.preOrder();
 	System.out.println();
 	objBinarySearchTree.postOrder();
+        System.out.println();
+        
+        System.out.print("Number of instances of 'EmptyTree: ");
+        System.out.println(EmptyTree.getCountOfInstances());
     
     }
 	

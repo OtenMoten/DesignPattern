@@ -52,19 +52,32 @@ public class Node implements BinSearchTree {
     }
 
     @Override
-    public void inOrder() {
+    // Sorted (ascending) ordering.
+    // Remember, the low variables are stored in the right roots and the high variables in the left root.
+    // The sorting algorithm is hiself executing recursively until the final right root.
+    // This is the place where the lowest variables is, and then it's printed.
+    // From the last Node-object then the algorithm will recursively check the left root.
+    // In this left root all the right roots will be looped like above and so on ...
+    // The whole binary tree is looped and read-out from right to left.
+    public void inOrder() { 
         
-        // sorted
-        if (this.objRightBinarySearchTree != null) {
+        // First, check the right roots.
+        if (this.objRightBinarySearchTree != null) { // matches every time !!
+            // If it's a Node then '.inOrder()' will be executed againg (recursive function).
+            // If it's a Empty-Tree then '.inOrder()' will do nothing.
             ((BinSearchTree) this.objRightBinarySearchTree).inOrder();
         }
         
+        // If there is no more variable in the right root of the last/recent node
+        // then print the ID of the last/recent node.
         System.out.print(nodeID + " ");
         
-        //'if' matches everytime
-        if (this.objLeftBinarySearchTree != null) {
-            //if it's a Node '.inOrder()' will recursive executed
-            //if it's a Empty-Tree '.inOrder()' will do nothing
+        // After all variables in the right roots are printed then to algorithm
+        // will start the same work in the left root of the main node on top.
+        // Print all variables in the left root of the main node from right to left.
+        if (this.objLeftBinarySearchTree != null) { // matches every time !!
+            // If it's a Node then '.inOrder()' will be executed againg (recursive function).
+            // If it's a Empty-Tree then '.inOrder()' will do nothing.
             ((BinSearchTree) this.objLeftBinarySearchTree).inOrder();
         }
         

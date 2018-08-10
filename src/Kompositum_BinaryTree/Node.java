@@ -5,7 +5,6 @@ public class Node implements BinSearchTree {
     Integer nodeID;
     BinSearchTree objLeftBinarySearchTree;
     BinSearchTree objRightBinarySearchTree;
-    // int steps;
 
     public Node(Integer newNodeID) {
 
@@ -25,11 +24,15 @@ public class Node implements BinSearchTree {
 
         switch (this.nodeID.compareTo(objNewInteger)) {
             case -1: // 'this.nodeID' is lower >> Put higher 'objNewInteger' in the left root
+                // The objLeftBinarySearchTree-object is type of a BinSearchTree-interface
+                // and therefore, a new Node-object will be created in te left root.
                 this.objLeftBinarySearchTree = this.objLeftBinarySearchTree.insert(objNewInteger);
                 break;
             case 0:
                 break;
             case +1: // 'this.nodeID' is higher >> Put lower 'objNewInteger' in the right root
+                // The objRightBinarySearchTree-object is type of a BinSearchTree-interface
+                // and therefore, a new Node-object will be created in te right root.
                 this.objRightBinarySearchTree = this.objRightBinarySearchTree.insert(objNewInteger);
                 break;
         }
@@ -84,12 +87,12 @@ public class Node implements BinSearchTree {
     }
     
     @Override
+    // This sorting algorithm loops from top to bottom and from right to left.
+    // First, it print the ID of the Node-object then it goes in the next right root and print the
+    // ID of this Node-object and so on ...
+    // If there is no more right roots then the left roots will be looped through and printed.
     public void preOrder() {
 
-        // Wurzelknoten
-        // linker Teilbaum - rechter Teilbaum
-        
-        // Print the 'nodeID' before the ordering
         System.out.print(nodeID + " ");
 
         if (this.objRightBinarySearchTree != null) {
@@ -103,11 +106,13 @@ public class Node implements BinSearchTree {
     }
 
     @Override
+    // This sorting algorithm loops from bottom to top and from right to left.
+    // First, the final right Node-object is printed and then the left neighbour.
+    // Next, the parent Node-object of both are printed and so on ...
+    // After the whole right root of the main Node-object is looped then
+    // it start again from the bottom in the left root.
     public void postOrder() {
 
-        // linker Teilbaum - rechter Teilbaum
-        // Wurzelknoten
-        
         if (this.objRightBinarySearchTree != null) {
             ((BinSearchTree) this.objRightBinarySearchTree).postOrder();
         }
@@ -116,7 +121,6 @@ public class Node implements BinSearchTree {
             ((BinSearchTree) this.objLeftBinarySearchTree).postOrder();
         }
 
-        // Print the 'nodeID' after the ordering
         System.out.print(nodeID + " ");
 
     }

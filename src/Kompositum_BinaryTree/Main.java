@@ -4,9 +4,12 @@ public class Main {
 
     public static void main(String[] args) {
 		
-	BinSearchTree objBinarySearchTree = EmptyTree.Instance();		
+        // The objBinarySearchTree-object is type of BinSearchTree-interface.
+        // Because the EmptyTree-class implements also the BinSearchTree-interface
+        // we can easily put the EmptyTree-class instance in objBinarySearchTree-object.
+	BinSearchTree objBinarySearchTree = EmptyTree.createInstance();
 	objBinarySearchTree = fillTree(objBinarySearchTree);
-	
+        
 	System.out.println(objBinarySearchTree);
 	System.out.println(objBinarySearchTree.isIn(11));
 		

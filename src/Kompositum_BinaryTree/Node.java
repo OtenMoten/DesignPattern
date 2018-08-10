@@ -10,9 +10,9 @@ public class Node implements BinSearchTree {
     public Node(Integer newNodeID) {
 
         this.nodeID = newNodeID;
-        this.objLeftBinarySearchTree = EmptyTree.Instance();
-        this.objRightBinarySearchTree = EmptyTree.Instance();
-
+        this.objLeftBinarySearchTree = EmptyTree.createInstance();
+        this.objRightBinarySearchTree = EmptyTree.createInstance();
+        
     }
 
     @Override

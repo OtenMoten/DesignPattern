@@ -10,7 +10,7 @@ public class Main {
 	BinSearchTree objBinarySearchTree = EmptyTree.createInstance();
 	objBinarySearchTree = fillTree(objBinarySearchTree);
         
-	System.out.println(objBinarySearchTree);
+	System.out.println(objBinarySearchTree); // Print the address in memory as hexa decimal value.
 	System.out.println(objBinarySearchTree.isIn(11));
 		
 	objBinarySearchTree.inOrder();

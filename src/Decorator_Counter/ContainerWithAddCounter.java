@@ -1,26 +1,32 @@
 package Decorator_Counter;
 
-// import java.util.Collection;
+import java.util.Collection;
 
-public class ContainerWithAddCounter<E> extends DecoratorContainer<E> {
+public class ContainerWithAddCounter<elementType> extends DecoratorContainer<elementType> {
 
     private int addCounter;
 
-    public ContainerWithAddCounter(Container<E> con) {
-        super(con);
+    public ContainerWithAddCounter(Container<elementType> newContainerWithAddCounter) {
+        super(newContainerWithAddCounter);
     }
 
-    public void add(E e) {
-        super.add(e);
-        addCounter++;
+    @Override
+    public void add(elementType newElementObject) {
+        super.add(newElementObject);
+        this.addCounter++;
     }
 
-//	public void addAll(Collection<E> c) {
-//		super.addAll((Collection<E>) c);
-//		addCounter += c.size();
-//	}
+    @Override
+    public void addCollection(Collection<elementType> newCollectionObject) {
+        super.addCollection((Collection<elementType>) newCollectionObject);
+        this.addCounter += newCollectionObject.size();
+    }
+
+    @Override
     public void print() {
         super.print();
-        System.out.println("add: " + addCounter);
+        System.out.println("add: " + this.addCounter);
     }
+
+
 }

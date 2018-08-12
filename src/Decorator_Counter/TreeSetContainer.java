@@ -3,33 +3,36 @@ package Decorator_Counter;
 import java.util.Collection;
 import java.util.TreeSet;
 
-public class TreeSetContainer<E> implements Container<E> {
+public class TreeSetContainer<elementType> implements Container<elementType> {
 
-    private TreeSet<E> mySet = new TreeSet<E>();
+    private TreeSet<elementType> myTreeSet = new TreeSet<>();
 
     @Override
-    public void add(E e) {
-        mySet.add(e);
-    }
-
-//	@Override
-//	public void addAll(Collection<E> c) {
-//		mySet.addAll((Collection<? extends E>) c);		
-//	}
-    @Override
-    public void remove(Object e) {
-        mySet.remove(e);
+    public void add(elementType newElementObject) {
+        this.myTreeSet.add(newElementObject);
     }
 
     @Override
-    public void removeAll(Collection<E> c) {
-        mySet.removeAll((Collection<?>) c);
+    public void addCollection(Collection<elementType> newCollectionObject) {
+        this.myTreeSet.addAll((Collection<? extends elementType>) newCollectionObject);
+    }
+
+    @Override
+    public void remove(Object elementObject) {
+        this.myTreeSet.remove(elementObject);
+    }
+
+    @Override
+    public void removeCollection(Collection<elementType> collectionObject) {
+        this.myTreeSet.removeAll((Collection<?>) collectionObject);
     }
 
     @Override
     public void print() {
-//		for(E e: mySet)
-//		  System.out.println(e);
-        System.out.println(mySet);
+        this.myTreeSet.forEach((elementObject) -> {
+            System.out.println(elementObject);
+        });
+        System.out.println(this.myTreeSet);
     }
+
 }

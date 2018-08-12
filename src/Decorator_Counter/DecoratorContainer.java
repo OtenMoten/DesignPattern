@@ -2,35 +2,37 @@ package Decorator_Counter;
 
 import java.util.Collection;
 
-public abstract class DecoratorContainer<E> implements Container<E> {
+public abstract class DecoratorContainer<elementType> implements Container<elementType> {
 
-    Container<E> myDecoCon;
+    Container<elementType> myDecoContainer;
 
-    public DecoratorContainer(Container<E> con) {
-        myDecoCon = con;
+    public DecoratorContainer(Container<elementType> newContainer) {
+        this.myDecoContainer = newContainer;
     }
 
     @Override
-    public void add(E e) {
-        myDecoCon.add(e);
-    }
-
-//	@Override
-//	public void addAll(Collection<E> c) {
-//		myDecoCon.addAll(c);		
-//	}
-    @Override
-    public void remove(E e) {
-        myDecoCon.remove(e);
+    public void add(elementType newElementObject) {
+        this.myDecoContainer.add(newElementObject);
     }
 
     @Override
-    public void removeAll(Collection<E> c) {
-        myDecoCon.removeAll(c);
+    public void addCollection(Collection<elementType> newCollectionObject) {
+        this.myDecoContainer.addCollection(newCollectionObject);
+    }
+
+    @Override
+    public void removeCollection(Collection<elementType> collectionObject) {
+        this.myDecoContainer.removeCollection(collectionObject);
+    }
+    
+    @Override
+    public void remove(elementType elementObject) {
+        this.myDecoContainer.remove(elementObject);
     }
 
     @Override
     public void print() {
-        myDecoCon.print();
+        this.myDecoContainer.print();
     }
+    
 }

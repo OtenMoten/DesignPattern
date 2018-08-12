@@ -2,15 +2,16 @@ package Decorator_Counter;
 
 import java.util.Collection;
 
-public interface Container<E> {
+public interface Container<elementType> {
 
-    void add(E e);
-    //void addAll(Collection<E> c);
+    void add(elementType newElementObject);
 
-    void remove(E e);
+    void addCollection(Collection<elementType> newCollectionObject);
 
-    void removeAll(Collection<E> c);
+    void remove(elementType elementType);
+
+    void removeCollection(Collection<elementType> collectionObjects);
 
     void print();
-    
+
 }

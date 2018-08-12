@@ -5,22 +5,21 @@ public class FlowerMaker {
     public static void main(String[] args) {
 
         FlowerBouquet rosebouquet = new RoseBouquet();
-        String rose = rosebouquet.getDescription();
-        rose += " = " + rosebouquet.cost();
-        System.out.println(rose);
+        
+        System.out.println(rosebouquet.getDescription() + " = " + rosebouquet.getCost());
 
         FlowerBouquet orchidBouquet = new OrchidBouquet();
 
+        // Do glitter on it
         Glitter glitter = new Glitter(orchidBouquet);
         orchidBouquet = glitter;
+        // Do again glitter on it
         orchidBouquet = new Glitter(orchidBouquet);
 
-        PaperWrapper pw = new PaperWrapper(orchidBouquet);
-        orchidBouquet = pw;
+        PaperWrapper paperWrapper = new PaperWrapper(orchidBouquet);
+        orchidBouquet = paperWrapper;
 
-        String orchid = orchidBouquet.getDescription();
-        orchid += " = " + orchidBouquet.cost();
-        System.out.println(orchid);
+        System.out.println(orchidBouquet.getDescription() + " = " + orchidBouquet.getCost());
 
     }
 

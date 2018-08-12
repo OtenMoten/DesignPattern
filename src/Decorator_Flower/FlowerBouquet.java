@@ -8,7 +8,7 @@ public abstract class FlowerBouquet {
         return description;
     }
 
-    public abstract double cost();
+    public abstract double getCost();
 }
 
 class RoseBouquet extends FlowerBouquet {
@@ -17,7 +17,8 @@ class RoseBouquet extends FlowerBouquet {
         description = "Rose Bouquet : 12 ";
     }
 
-    public double cost() {
+    @Override
+    public double getCost() {
         return 12.0;
     }
 }
@@ -28,7 +29,8 @@ class OrchidBouquet extends FlowerBouquet {
         description = "Orchid Bouquet: 22  ";
     }
 
-    public double cost() {
+    @Override
+    public double getCost() {
         return 22.0;
     }
 }

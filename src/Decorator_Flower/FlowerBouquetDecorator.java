@@ -13,12 +13,14 @@ class Glitter extends FlowerBouquet //extends FlowerBouquetDecorator
         this.flowerBouquet = flowerBouquet;
     }
 
+    @Override
     public String getDescription() {
         return flowerBouquet.getDescription() + "  +4";
     }
 
-    public double cost() {
-        return 4 + flowerBouquet.cost();
+    @Override
+    public double getCost() {
+        return 4 + flowerBouquet.getCost();
     }
 
 }
@@ -31,12 +33,14 @@ class PaperWrapper extends FlowerBouquet {
         this.flowerBouquet = flowerBouquet;
     }
 
+    @Override
     public String getDescription() {
         return flowerBouquet.getDescription() + "  +3";
     }
 
-    public double cost() {
-        return 3 + flowerBouquet.cost();
+    @Override
+    public double getCost() {
+        return 3 + flowerBouquet.getCost();
     }
 
 }
@@ -49,12 +53,14 @@ class RibbonBow extends FlowerBouquet {
         this.flowerBouquet = flowerBouquet;
     }
 
+    @Override
     public String getDescription() {
         return flowerBouquet.getDescription() + "  +8";
     }
 
-    public double cost() {
-        return 8 + flowerBouquet.cost();
+    @Override
+    public double getCost() {
+        return 8 + flowerBouquet.getCost();
     }
 
 }

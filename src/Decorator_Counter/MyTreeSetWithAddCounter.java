@@ -21,17 +21,4 @@ public class MyTreeSetWithAddCounter extends TreeSet {
         return this.addCounter;
     }
 
-//	public static void main(String[] args) {
-//		
-//		TreeSet<String> c = new TreeSet<String>();
-//		c.add("a"); c.add("b");  c.add("x");
-//		
-//		MyTreeSetWithAddCounter myTree = new MyTreeSetWithAddCounter();
-//		myTree.addAll(c);		
-//		myTree.add("c");
-//
-//		
-//		System.out.println(myTree.getCounter());
-//		System.out.println(myTree);
-//	}
 }

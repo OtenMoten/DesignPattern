@@ -1,6 +1,6 @@
 package Singleton_Eager;
 
-public class MainEagerThreads {
+public class MainWithThreads {
 
     public static void main(String[] args) throws InterruptedException {
 	

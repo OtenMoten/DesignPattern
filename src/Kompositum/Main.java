@@ -1,13 +1,13 @@
 package Kompositum;
 
-public class MainKompositum {
+public class Main {
 
     public static void main(String[] args) {
 	
-	Blatt blatt_one = new Blatt("1");
-	Blatt blatt_two = new Blatt("2");
-	KompositumKomponente objKompositumKomponente_A = new KompositumKomponente("A");
-	KompositumKomponente objKompositumKomponente_B = new KompositumKomponente("B");
+	Leaf blatt_one = new Leaf("1");
+	Leaf blatt_two = new Leaf("2");
+	KompositumComponent objKompositumKomponente_A = new KompositumComponent("A");
+	KompositumComponent objKompositumKomponente_B = new KompositumComponent("B");
 		
 	objKompositumKomponente_A.hinzu(blatt_two);
 	objKompositumKomponente_A.hinzu(objKompositumKomponente_B);

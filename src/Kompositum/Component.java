@@ -1,6 +1,6 @@
 package Kompositum;
 
-abstract class Komponente {
+abstract class Component {
 
     String komponentenName;
     

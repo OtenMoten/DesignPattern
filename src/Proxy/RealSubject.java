@@ -1,24 +1,24 @@
 package Proxy;
 
-public class EchtesSubjekt implements ISubjekt {
+public class RealSubject implements ISubject {
 
     protected int intValue;
     protected float floatValue;
 
-    EchtesSubjekt() {
+    RealSubject() {
         this.intValue = 1;
         this.floatValue = 1.0f;
     }
 
     @Override
     public int getIntValue() {
-        System.out.print("EchtesSubjekt.getIntValue() --> ");
+        System.out.print("RealSubject.getIntValue() --> ");
         return this.intValue;
     }
 
     @Override
     public float getFloatValue() {
-        System.out.print("EchtesSubjekt.getFloatValue() --> ");
+        System.out.print("RealSubject.getFloatValue() --> ");
         return this.floatValue;
     }
 

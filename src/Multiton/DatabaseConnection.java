@@ -9,7 +9,7 @@ public class DatabaseConnection {
     }
 	
     public void open(Integer key) {
-	System.out.println("es wird connectiert mit " + connectionString + " " + key);		
+	System.out.println("Connection with " + connectionString + " " + key + " is creating.");		
     }
 
 }

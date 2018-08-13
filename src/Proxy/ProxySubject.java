@@ -1,12 +1,12 @@
 package Proxy;
 
-public class ProxySubjekt implements ISubjekt {
+public class ProxySubject implements ISubject {
 
-    private ISubjekt myProxy = new EchtesSubjekt();
+    private ISubject myProxy = new RealSubject();
 
     // Delegate the calling of functions to the Proxy-object.
     // In this case the "myProxy"-variable is 
-    // the Proxy-object for the EchtesSubjekt-class. 
+    // the Proxy-object for the RealSubject-class. 
    
     // The user call this function in the main over this class.
     // But in reality the value come from a another class.

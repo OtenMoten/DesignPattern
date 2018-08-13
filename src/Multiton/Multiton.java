@@ -31,7 +31,7 @@ public class Multiton {
     }
 
     public int getInstanceID() {
-        return instanceID;
+        return this.instanceID;
     }
     
     // For testing purposes only.

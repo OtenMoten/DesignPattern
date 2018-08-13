@@ -1,8 +1,8 @@
 package Kompositum;
 
-class Blatt extends Komponente {
+class Leaf extends Component {
 	
-    public Blatt(String blattName){
+    public Leaf(String blattName){
        	super.komponentenName = blattName;
     }
 

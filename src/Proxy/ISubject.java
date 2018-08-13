@@ -1,6 +1,6 @@
 package Proxy;
 
-public interface ISubjekt {
+public interface ISubject {
     int getIntValue();
     float getFloatValue();
 }

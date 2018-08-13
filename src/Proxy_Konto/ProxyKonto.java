@@ -2,43 +2,43 @@ package Proxy_Konto;
 
 import java.util.Scanner;
 
-public class ProxyKonto implements IKonto {
+public class ProxyKonto implements IAccount {
 
-    private final IKonto konto;
-    private final int pin;
+    private final IAccount account;
+    private final int pincode;
 
-    public ProxyKonto(IKonto userKonto, int pin) {
-        this.konto = userKonto;
-        this.pin = pin;
+    public ProxyKonto(IAccount userKonto, int newPin) {
+        this.account = userKonto;
+        this.pincode = newPin;
     }
 
     @Override
-    public void einzahlen(double input) {
-        this.konto.einzahlen(input);
+    public void deposit(double input) {
+        this.account.deposit(input);
         System.out.println(input + "€ wurden dem Konto gutgeschrieben");
     }
     
     @Override
-    public void abheben(double output) {
+    public void withdraw(double output) {
        
         System.out.println("Bitte Ihre PIN!");
         
         Scanner scannerObject = new Scanner(System.in);
-        int pincode = scannerObject.nextInt();
+        int inputPincode = scannerObject.nextInt();
         
-        if (pincode == this.pin) {
-            this.konto.abheben(output);
+        if (inputPincode == this.pincode) {
+            this.account.withdraw(output);
             System.out.println(output + "€ wurden abgehoben");
         } else {
             System.out.println("PIN falsch, bitte nochmal versuchen");
-            abheben(output);
+            withdraw(output);
         }
         
     }
 
     @Override
-    public void getKontostand() {
-        this.konto.getKontostand();
+    public void getBalance() {
+        this.account.getBalance();
     }
     
 }

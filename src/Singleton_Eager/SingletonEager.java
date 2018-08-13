@@ -9,7 +9,7 @@ public class SingletonEager {
     // Constructor is private.
     // This is one of the keypoints in the Singleton_Eager design pattern.
     private SingletonEager(int newInt) {
-    	iSaveInt = newInt;
+    	this.iSaveInt = newInt;
     }
 
     public static SingletonEager getInstance() {
@@ -22,7 +22,7 @@ public class SingletonEager {
     }
 
     public void setValue(int newInt) {
-    	iSaveInt = newInt;
+    	this.iSaveInt = newInt;
     }
 
 }

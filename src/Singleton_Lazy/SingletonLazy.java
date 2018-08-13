@@ -19,12 +19,11 @@ public class SingletonLazy {
 
     @Override
     public String toString() {
-    	// "+ objSingletonLazy" causes "StackOverflow" in "MainLazy".
-        return objSingletonLazy.hashCode() + " : ... " + objSingletonLazy; 
+        return objSingletonLazy.hashCode() + " : ... " + this.iSaveInt; 
     }
 
     public void setValue(int newInt) {
-	iSaveInt = newInt;
+	this.iSaveInt = newInt;
     }
 
 }

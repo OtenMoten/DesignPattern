@@ -4,31 +4,31 @@ public class Kompositum {
 
     public static void main(String[] args) {
 
-        Schachtel schachtel_1 = new Schachtel(),
-                schachtel_2 = new Schachtel(),
-                schachtel_3 = new Schachtel(),
-                schachtel_4 = new Schachtel();
+        Box box_1 = new Box(), box_2 = new Box(),
+                box_3 = new Box(),
+                box_4 = new Box();
 
-        Dose dose_1 = new Dose(),
-                dose_2 = new Dose(),
-                dose_3 = new Dose();
+        Can can_1 = new Can(), can_2 = new Can(), can_3 = new Can();
 
-        Kiste kiste_1 = new Kiste(),
-                kiste_2 = new Kiste(),
-                mainTruhe = new Kiste();
+        Treasure mainTreasure = new Treasure();
+        Treasure treasure_1 = new Treasure(), treasure_2 = new Treasure();
 
-        kiste_1.legeRein(schachtel_1);
-        kiste_1.legeRein(schachtel_2);
-        kiste_2.legeRein(schachtel_3);
-        kiste_2.legeRein(schachtel_4);
-        kiste_2.legeRein(dose_1);
-        kiste_2.legeRein(dose_2);
-        kiste_2.legeRein(dose_3);
+        treasure_1.put(box_1);
+        treasure_1.put(box_2);
+        treasure_2.put(box_3);
+        treasure_2.put(box_4);
+        treasure_2.put(can_1);
+        treasure_2.put(can_2);
+        treasure_2.put(can_3);
 
-        mainTruhe.legeRein(kiste_1);
-        mainTruhe.legeRein(kiste_2);
+        mainTreasure.put(treasure_1);
+        mainTreasure.put(treasure_2);
+        
+        mainTreasure.getContent();
+        
+        treasure_2.get(can_3);
 
-        mainTruhe.enthalte();
+        mainTreasure.getContent();
 
     }
 

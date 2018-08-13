@@ -1,6 +1,6 @@
 package Singleton_Enum;
 
-public class MainEnum {
+public class Main {
 
     public static void main(String[] args) {
 

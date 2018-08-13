@@ -10,8 +10,7 @@ public class Main {
         
         System.out.println(myValueNode.calculate());
         
-        for(Operations op : IExpTree.Operations.values())
-            System.out.println(op);
+        for(Operations op : IExpTree.Operations.values()) System.out.println(op);
         
     }
 

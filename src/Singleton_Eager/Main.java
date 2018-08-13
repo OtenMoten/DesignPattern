@@ -1,6 +1,6 @@
 package Singleton_Eager;
 
-public class MainEager {
+public class Main {
 
     public static void main(String[] args) {
 

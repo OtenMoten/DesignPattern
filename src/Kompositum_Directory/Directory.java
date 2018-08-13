@@ -2,27 +2,27 @@ package Kompositum_Directory;
 
 import java.util.ArrayList;
 
-public class Directory extends Komponente{
+public class Directory extends Component{
 
-    private ArrayList<Komponente> contentList = new ArrayList<>();
+    private ArrayList<Component> contentList = new ArrayList<>();
     
     public Directory(String directoryName) {
         super(directoryName);
     }
 
-    public void hinzufuegen(Komponente objComponent) {
-	contentList.add(objComponent);
+    public void hinzufuegen(Component objComponent) {
+	this.contentList.add(objComponent);
     }
 	
-    public void entfernen(Komponente objComponent) {
-        contentList.remove(objComponent);
+    public void entfernen(Component objComponent) {
+        this.contentList.remove(objComponent);
     }
 	
     public String ausgebenInhalt() {
         
         String ausgabe = "";
         
-        for(Komponente objComponent: contentList) {
+        for(Component objComponent: contentList) {
 		
             ausgabe += objComponent.getName();
                 

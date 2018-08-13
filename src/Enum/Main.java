@@ -1,6 +1,7 @@
-package StrukturAufgabe_5;
+// StrukturAufgabe_5
+package Enum;
 
-import StrukturAufgabe_5.IExpTree.Operations;
+import Enum.IExpTree.Operations;
 
 public class Main {
 

@@ -1,4 +1,4 @@
-package StrukturAufgabe_5;
+package Enum;
 
 interface IExpTree {
 

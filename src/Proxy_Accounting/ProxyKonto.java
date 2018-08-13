@@ -1,4 +1,4 @@
-package Proxy_Konto;
+package Proxy_Accounting;
 
 import java.util.Scanner;
 

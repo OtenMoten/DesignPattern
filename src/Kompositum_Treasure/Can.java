@@ -1,4 +1,4 @@
-package Kompositum_Kiste;
+package Kompositum_Treasure;
 
 class Can implements Container {
 

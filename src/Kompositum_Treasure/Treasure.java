@@ -1,4 +1,4 @@
-package Kompositum_Kiste;
+package Kompositum_Treasure;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -2,7 +2,7 @@ package Adapter_StackDeque;
 
 import java.util.ArrayDeque;
 
-public class Klient {
+public class Client {
 
     public static void main(String[] args) {
 
@@ -14,6 +14,7 @@ public class Klient {
         
         System.out.println("First number of the stack: " + stack.top());
         System.out.println("Last number of the stack: " + stack.bottom());
+        
         while (!stack.isEmpty()) System.out.println(stack.pop());
         
         System.out.println("Is the stack empty? : " + stack.isEmpty());

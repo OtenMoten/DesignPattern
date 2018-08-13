@@ -13,19 +13,19 @@ public class ContainerWithRemoveCounter<elementType> extends DecoratorContainer<
     @Override
     public void remove(elementType elementObject) {
         super.remove(elementObject);
-        removeCounter++;
+        this.removeCounter++;
     }
 
     @Override
     public void removeCollection(Collection<elementType> collectionObject) {
         super.removeCollection((Collection<elementType>) collectionObject);
-        removeCounter += collectionObject.size();
+        this.removeCounter += collectionObject.size();
     }
 
     @Override
     public void print() {
         super.print();
-        System.out.println("remove: " + removeCounter);
+        System.out.println("remove: " + this.removeCounter);
     }
 
 }

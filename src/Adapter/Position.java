@@ -3,16 +3,16 @@ package Adapter;
 public class Position {
 
     int positionNr;
-    int artikelNr;
+    int itemNr;
 
     public Position(int newPositionNr, int newArtikelNr) {
         this.positionNr = newPositionNr;
-        this.artikelNr = newArtikelNr;
+        this.itemNr = newArtikelNr;
     }
 
     @Override
     public String toString() {
-        return "posNr: " + this.positionNr + "  ArtikelNr: " + this.artikelNr;
+        return "On position #" + this.positionNr + " is Item #" + this.itemNr + ".";
     }
     
 }

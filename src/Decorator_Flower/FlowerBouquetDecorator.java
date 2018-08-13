@@ -1,13 +1,13 @@
 package Decorator_Flower;
 
 public abstract class FlowerBouquetDecorator extends FlowerBouquet {
-    //public abstract String getDescription();
+    @Override
+    public abstract String getDescription();
 }
 
-class Glitter extends FlowerBouquet //extends FlowerBouquetDecorator
-{
+class Glitter extends FlowerBouquetDecorator {
 
-    private FlowerBouquet flowerBouquet;
+    private final FlowerBouquet flowerBouquet;
 
     public Glitter(FlowerBouquet flowerBouquet) {
         this.flowerBouquet = flowerBouquet;
@@ -15,12 +15,12 @@ class Glitter extends FlowerBouquet //extends FlowerBouquetDecorator
 
     @Override
     public String getDescription() {
-        return flowerBouquet.getDescription() + "  +4";
+        return this.flowerBouquet.getDescription() + "  +4";
     }
 
     @Override
     public double getCost() {
-        return 4 + flowerBouquet.getCost();
+        return 4 + this.flowerBouquet.getCost();
     }
 
 }
@@ -35,12 +35,12 @@ class PaperWrapper extends FlowerBouquet {
 
     @Override
     public String getDescription() {
-        return flowerBouquet.getDescription() + "  +3";
+        return this.flowerBouquet.getDescription() + "  +3";
     }
 
     @Override
     public double getCost() {
-        return 3 + flowerBouquet.getCost();
+        return 3 + this.flowerBouquet.getCost();
     }
 
 }
@@ -55,12 +55,12 @@ class RibbonBow extends FlowerBouquet {
 
     @Override
     public String getDescription() {
-        return flowerBouquet.getDescription() + "  +8";
+        return this.flowerBouquet.getDescription() + "  +8";
     }
 
     @Override
     public double getCost() {
-        return 8 + flowerBouquet.getCost();
+        return 8 + this.flowerBouquet.getCost();
     }
 
 }

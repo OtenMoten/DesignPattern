@@ -12,7 +12,7 @@ public class GUI {
     public GUI() {
         
         this.mainFrame = new JFrame();
-        this.mainFrame.setTitle("Beispiel LinesDecorator");
+        this.mainFrame.setTitle("Example LinesDecorator");
         this.mainFrame.setBounds(300, 200, 600, 400);
         
         this.mainFrame.addWindowListener(new WindowAdapter() {

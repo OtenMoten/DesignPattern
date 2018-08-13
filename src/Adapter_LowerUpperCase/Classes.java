@@ -11,12 +11,12 @@ class Adapter implements Ziel {
 
     @Override
     public void doUpperCase(String input) {
-        System.out.println(myProvider.doUpperCase(input));
+        System.out.println(this.myProvider.doUpperCase(input));
     }
 
     @Override
     public void doLowerCase(String input) {
-        System.out.println(myProvider.doLowerCase(input));
+        System.out.println(this.myProvider.doLowerCase(input));
     }
 
 }

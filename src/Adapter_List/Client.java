@@ -10,12 +10,13 @@ public class Client {
 
         ArrayList<String> myArrayList = new ArrayList<>();
 
-        myArrayList.add("Auf der Mauer");
-        myArrayList.add("auf der Lauer");
-        myArrayList.add("sitzt ne kleine Wanze");
-        myArrayList.add("seht euch mal die Wanze an!");
+        myArrayList.add("Text_1");
+        myArrayList.add("Text_2");
+        myArrayList.add("Text_3");
+        myArrayList.add("Text_4");
 
         objListOutput.showList(myArrayList);
+        
     }
     
 }

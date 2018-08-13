@@ -4,23 +4,23 @@ public class Client {
 
     public static void main(String[] args) {
 
-        Mallard duck = new Mallard();
-        WildTurkey turkey = new WildTurkey();
+        Mallard mallardDuck = new Mallard();
+        WildTurkey wildTurkey = new WildTurkey();
 
         // We cover the turkey as a duck with the class "TurkeyAdapter".
         // The "TurkeyAdapter"-class implements the interface "IDuck" and
         // it's functions. Therefore, the turkey can be camouflaged as a duck.
-        IDuck turkeyAdapter = new TurkeyAdapter(turkey);
+        IDuck turkeyAdapter = new TurkeyAdapter(wildTurkey);
 
         System.out.println("Turkey says:");
-        turkey.gobble(); // The turkey is gobbling.
-        turkey.flyShort(); // The turkey is flying short distances.
+        wildTurkey.gobble(); // The turkey is gobbling.
+        wildTurkey.flyShort(); // The turkey is flying short distances.
 
         System.out.println();
 
         System.out.println("Duck says:");
-        duck.quack(); // The duck is quacking.
-        duck.flyLong(); // The duck is flying long distances.
+        mallardDuck.quack(); // The duck is quacking.
+        mallardDuck.flyLong(); // The duck is flying long distances.
 
         System.out.println();
 

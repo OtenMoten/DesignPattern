@@ -17,7 +17,7 @@ public class LinesDecorator extends JComponentDecorator {
             newLinesColor = Color.black;
         }
 
-        setBackground(newLinesColor);
+        super.setBackground(newLinesColor);
 
     }
 

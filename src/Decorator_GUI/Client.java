@@ -2,7 +2,7 @@ package Decorator_GUI;
 
 import java.awt.Color;
 
-public class Klient {
+public class Client {
 
     public static void main(String[] args) {
 

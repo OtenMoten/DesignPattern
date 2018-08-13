@@ -1,5 +1,6 @@
 # DesignPattern_Structural
-This my library of examples by various structural design patterns.
+This is the first public release of my library that contains various structural design patterns,
+especially for Java.
 
 Any code must be understandably, clearly and reusable.
 

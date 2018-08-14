@@ -3,7 +3,7 @@
  *
  * Enjoy the course and feel free to contribute.
  */
-package Iterator_Objects;
+package Delegation_Iteration;
 
 /**
  * @author Kevin Ossenbrück

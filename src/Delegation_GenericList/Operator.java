@@ -1,5 +1,15 @@
+/**
+ * In this package you will learn how to create a list for generic objects.
+ *
+ * Enjoy the course and feel free to contribute.
+ */
 package Delegation_GenericList;
 
+/**
+ * @author Kevin Ossenbrück
+ * @date August 2018
+ * @github https://github.com/OtenMoten
+ */
 import java.util.Arrays;
 import java.util.TreeSet;
 

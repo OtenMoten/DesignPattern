@@ -3,7 +3,7 @@
  *
  * Enjoy the course and feel free to contribute.
  */
-package Delegation_Example;
+package Delegation_Example_Alpha;
 
 /**
  * @author Kevin Ossenbrück

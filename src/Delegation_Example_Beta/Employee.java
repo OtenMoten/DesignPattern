@@ -3,18 +3,24 @@
  *
  * Enjoy the course and feel free to contribute.
  */
-package Delegation_Example;
+package Delegation_Example_Beta;
 
 /**
  * @author Kevin Ossenbrück
  * @date August 2018
  * @github https://github.com/OtenMoten
  */
-public class ToConsole implements IOutput {
+public class Employee {
+
+    private final String myName;
+
+    public Employee(String newName) {
+        this.myName = newName;
+    }
 
     @Override
-    public void write(char myCharacter) {
-        System.out.println(myCharacter);
+    public String toString() {
+        return myName;
     }
 
 }

@@ -1,14 +1,14 @@
+/**
+ * In this package you will learn how to deal with delegation.
+ *
+ * Enjoy the course and feel free to contribute.
+ */
 package Delegation_GenericFunction;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 /**
- *
- * @author Kevin
+ * @author Kevin Ossenbrück
+ * @date August 2018
+ * @github https://github.com/OtenMoten
  */
 public class Class {
 
